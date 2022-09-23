@@ -1,21 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_applicat_eafit/home/mainapphome.dart';
-import 'package:flutter_applicat_eafit/home/signup_screen1.dart';
 
-class LoginScreen extends StatefulWidget {
+class SignUp2 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => InitState();
 }
 
-class InitState extends State<LoginScreen> {
+class InitState extends State<SignUp2> {
   @override
   Widget build(BuildContext context) {
     return initWidget();
-  }
-
-  signupRoute() {
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => SignUp1()));
   }
 
   Widget initWidget() {
@@ -27,7 +21,7 @@ class InitState extends State<LoginScreen> {
               height: 400,
               decoration: BoxDecoration(
                   borderRadius:
-                      BorderRadius.only(bottomLeft: Radius.circular(390)),
+                  BorderRadius.only(bottomLeft: Radius.circular(390)),
                   color: Color.fromARGB(255, 13, 139, 217),
                   gradient: LinearGradient(colors: [
                     (Color.fromARGB(255, 13, 139, 217)),
@@ -76,7 +70,35 @@ class InitState extends State<LoginScreen> {
                       Icons.email,
                       color: Color.fromARGB(255, 13, 139, 217),
                     ),
-                    hintText: "Entrar Email",
+                    hintText: "Nombre Paciente",
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none),
+              ),
+            ),
+
+            Container(
+              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+              padding: EdgeInsets.only(left: 20, right: 20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: Colors.grey[200],
+                boxShadow: [
+                  BoxShadow(
+                      offset: Offset(0, 10),
+                      blurRadius: 50,
+                      color: Color(0xffEEEEEE))
+                ],
+              ),
+              alignment: Alignment.center,
+              child: TextField(
+                obscureText: true,
+                cursorColor: Color.fromARGB(255, 13, 139, 217),
+                decoration: InputDecoration(
+                    icon: Icon(
+                      Icons.calendar_month,
+                      color: Color.fromARGB(255, 13, 139, 217),
+                    ),
+                    hintText: "Fecha Nacimiento",
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none),
               ),
@@ -100,128 +122,28 @@ class InitState extends State<LoginScreen> {
                 cursorColor: Color.fromARGB(255, 13, 139, 217),
                 decoration: InputDecoration(
                     icon: Icon(
-                      Icons.vpn_key,
+                      Icons.numbers,
                       color: Color.fromARGB(255, 13, 139, 217),
                     ),
-                    hintText: "Ingresa Contraseña",
+                    hintText: "Edad Paciente",
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none),
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 20, right: 20),
-              alignment: Alignment.centerRight,
-              child: GestureDetector(
-                child: Text("¿Olvidaste tu Contraseña?"),
-                onTap: () => {},
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 50, right: 50, top: 70),
-              padding: EdgeInsets.only(left: 20, right: 20),
-              alignment: Alignment.center,
-              height: 45,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [
-                  (Color.fromARGB(255, 13, 139, 217)),
-                  (Color.fromARGB(255, 13, 139, 217))
-                ], begin: Alignment.centerLeft, end: Alignment.centerRight),
-                borderRadius: BorderRadius.circular(50),
-                boxShadow: [
-                  BoxShadow(
-                      offset: Offset(0, 10),
-                      blurRadius: 50,
-                      color: Color(0xffEEEEEE))
-                ],
-              ),
-              child: Text(
-                "INGRESAR",
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
             MaterialButton(
-              minWidth: 290.0,
+              elevation: (100.0),
+              minWidth: 280.0,
               height: 45.0,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50)
+              shape:
+              RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50)
               ),
+              // CRON PARA LAS ALARMAS
               onPressed: () {
-                signupRoute();
               },
               color: Color.fromARGB(255, 13, 139, 217),
-              child: Text('REGISTRARSE', style: TextStyle(color: Colors.white)),
+              child: Text('Informacio Familiar', style: TextStyle(color: Colors.white)),
             ),
-            /*
-            Container(
-              margin: EdgeInsets.only(left: 50, right: 50, top: 20),
-              padding: EdgeInsets.only(left: 20, right: 20),
-              alignment: Alignment.center,
-              height: 54,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [
-                  (Color.fromARGB(255, 13, 139, 217)),
-                  (Color.fromARGB(255, 13, 139, 217))
-                ], begin: Alignment.centerLeft, end: Alignment.centerRight),
-                borderRadius: BorderRadius.circular(50),
-                boxShadow: [
-                  BoxShadow(
-                      offset: Offset(0, 10),
-                      blurRadius: 50,
-                      color: Color(0xffEEEEEE))
-                ],
-              ),
-              child: Text(
-                "REGISTRARSE",
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            */
-            Container(
-              margin: EdgeInsets.only(top: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("¿Necesitas Ayuda?"),
-                  GestureDetector(
-                    onTap: () => {},
-                    child: Text("Llamanos",
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 13, 139, 217))),
-                  )
-                ],
-              ),
-            ),
-
-/*              child: Container(
-                margin: EdgeInsets.only(left: 20, right: 20, top: 70),
-                padding: EdgeInsets.only(left: 20, right: 20),
-                alignment: Alignment.center,
-                height: 54,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                    (Color.fromARGB(255, 13, 139, 217)),
-                    (Color.fromARGB(255, 13, 139, 217))
-                  ], begin: Alignment.centerLeft, end: Alignment.centerRight),
-                  borderRadius: BorderRadius.circular(50),
-                  boxShadow: [
-                    BoxShadow(
-                        offset: Offset(0, 10),
-                        blurRadius: 50,
-                        color: Color(0xffEEEEEE))
-                  ],
-                ),
-                child: Text(
-                  "INGRESAR",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-*/
           ],
         ),
       ),

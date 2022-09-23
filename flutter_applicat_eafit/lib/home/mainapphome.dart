@@ -45,7 +45,7 @@ class InitState extends State<SplashScreen> {
           Center(
             child: Container(
               child: Image.asset(
-                  "/Users/angelmunozquintero/Documents/Universidad CES/Proyecto EAFIT/DevelopEAFIT/images/logo.png"),
+                  "C:/Users/juanm/OneDrive/Documentos/VIDAIN/Flutter_app_ProEafit/images/logo.png"),
             ),
           )
         ],
