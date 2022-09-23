@@ -21,7 +21,7 @@ class InitState extends State<LoginScreen> {
               height: 400,
               decoration: BoxDecoration(
                   borderRadius:
-                      BorderRadius.only(bottomLeft: Radius.circular(90)),
+                      BorderRadius.only(bottomLeft: Radius.circular(390)),
                   color: Color.fromARGB(255, 13, 139, 217),
                   gradient: LinearGradient(colors: [
                     (Color.fromARGB(255, 13, 139, 217)),
