@@ -44,11 +44,11 @@ class _LoginPageState extends State<LoginPage> {
               height: 400,
               decoration: BoxDecoration(
                   borderRadius:
-                      BorderRadius.only(bottomLeft: Radius.circular(390)),
-                  color: Color.fromARGB(255, 13, 139, 217),
+                      BorderRadius.only(bottomLeft: Radius.circular(370)),
+                  color: (const Color(0xFF0F758C)),
                   gradient: LinearGradient(colors: [
-                    (Color.fromARGB(255, 13, 139, 217)),
-                    (Color.fromARGB(255, 13, 139, 217))
+                    (const Color(0xFF0F758C)),
+                    (const Color(0xFF0F758C)),
                   ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
               child: Center(
                 child: Column(
@@ -56,9 +56,8 @@ class _LoginPageState extends State<LoginPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(
-                        top: 100,
-                      ),
+                      margin: EdgeInsets.only(top: 40),
+
                       // ignore: sort_child_properties_last
                       child: Image.asset(
                           "/Applications/development/flutter/Flutter_app_ProEafit/images/logo.png"),
@@ -77,24 +76,22 @@ class _LoginPageState extends State<LoginPage> {
               margin: EdgeInsets.only(left: 20, right: 20, top: 50),
               padding: EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(
+                border: Border.all(color: (Colors.black), width: 2),
                 borderRadius: BorderRadius.circular(50),
-                color: Colors.grey[200],
+                color: Colors.white,
                 boxShadow: [
                   BoxShadow(
                       offset: Offset(0, 10),
                       blurRadius: 50,
-                      color: Color(0xffEEEEEE))
+                      color: Colors.white)
                 ],
               ),
               alignment: Alignment.center,
               child: TextField(
                 controller: _emailController,
-                cursorColor: Color.fromARGB(255, 13, 139, 217),
+                cursorColor: Colors.black,
                 decoration: InputDecoration(
-                    icon: Icon(
-                      Icons.email,
-                      color: Color.fromARGB(255, 13, 139, 217),
-                    ),
+                    icon: Icon(Icons.email, color: Colors.black),
                     hintText: "Entrar Email",
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none),
@@ -105,23 +102,24 @@ class _LoginPageState extends State<LoginPage> {
               padding: EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
-                color: Colors.grey[200],
+                color: Colors.white,
+                border: Border.all(color: Colors.black, width: 2),
                 boxShadow: [
                   BoxShadow(
                       offset: Offset(0, 10),
                       blurRadius: 50,
-                      color: Color(0xffEEEEEE))
+                      color: Colors.white)
                 ],
               ),
               alignment: Alignment.center,
               child: TextField(
                 controller: _passwordController,
                 obscureText: true,
-                cursorColor: Color.fromARGB(255, 13, 139, 217),
+                cursorColor: Colors.black,
                 decoration: InputDecoration(
                     icon: Icon(
                       Icons.vpn_key,
-                      color: Color.fromARGB(255, 13, 139, 217),
+                      color: Colors.black,
                     ),
                     hintText: "Ingresa Contraseña",
                     enabledBorder: InputBorder.none,
@@ -132,7 +130,11 @@ class _LoginPageState extends State<LoginPage> {
               margin: EdgeInsets.only(top: 20, right: 20),
               alignment: Alignment.centerRight,
               child: GestureDetector(
-                child: Text("¿Olvidaste tu Contraseña?"),
+                child: Text("¿Olvidaste tu Contraseña?",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 13)),
                 onTap: () => {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return ForgotPasswordPage();
@@ -143,14 +145,14 @@ class _LoginPageState extends State<LoginPage> {
             GestureDetector(
               onTap: signIn,
               child: Container(
-                margin: EdgeInsets.only(left: 50, right: 50, top: 50),
+                margin: EdgeInsets.only(left: 50, right: 50, top: 30),
                 padding: const EdgeInsets.only(left: 20, right: 20),
                 alignment: Alignment.center,
                 height: 54,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [
-                    (Color.fromARGB(255, 13, 139, 217)),
-                    (Color.fromARGB(255, 13, 139, 217))
+                    (const Color(0xFF49D3F2)),
+                    (const Color(0xFF49D3F2)),
                   ], begin: Alignment.centerLeft, end: Alignment.centerRight),
                   borderRadius: BorderRadius.circular(50),
                   boxShadow: [
@@ -161,8 +163,10 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
                 child: Text(
-                  "INGRESAR",
+                  "Iniciar sesión",
                   style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
@@ -177,8 +181,8 @@ class _LoginPageState extends State<LoginPage> {
                 height: 54,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [
-                    (Color.fromARGB(255, 13, 139, 217)),
-                    (Color.fromARGB(255, 13, 139, 217))
+                    (const Color(0xFFF28C76)),
+                    (const Color(0xFFF28C76))
                   ], begin: Alignment.centerLeft, end: Alignment.centerRight),
                   borderRadius: BorderRadius.circular(50),
                   boxShadow: [
@@ -189,8 +193,10 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
                 child: Text(
-                  "REGISTRARSE",
+                  "Registrarse",
                   style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
@@ -204,9 +210,8 @@ class _LoginPageState extends State<LoginPage> {
                   Text("¿Necesitas Ayuda?"),
                   GestureDetector(
                     onTap: () => {},
-                    child: Text("Llamanos",
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 13, 139, 217))),
+                    child:
+                        Text("Llamanos", style: TextStyle(color: Colors.blue)),
                   )
                 ],
               ),

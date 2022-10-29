@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'ButtonReporte.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,23 +21,24 @@ class _HomePageState extends State<HomePage> {
         decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
-                  "/Applications/development/flutter/Flutter_app_ProEafit/images/logo2.png"),
+                  "/Applications/development/flutter/Flutter_app_ProEafit/images/fondo.png"),
               fit: BoxFit.cover),
         ),
         child: Center(
           child: Column(
             children: [
-              SizedBox(
-                height: 100,
+              Container(
+                child: SizedBox(
+                  height: 45,
+                ),
               ),
               Container(
                 child: Material(
-                  color: Colors.blue,
+                  color: Colors.white,
                   elevation: 20,
-                  borderRadius: BorderRadius.circular(30),
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                   child: InkWell(
-                    splashColor: Colors.green,
+                    splashColor: Colors.blue,
                     onTap: () {},
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
@@ -44,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                         Ink.image(
                           image: AssetImage(
                               '/Applications/development/flutter/Flutter_app_ProEafit/images/pastillas.png'),
-                          height: 80,
+                          height: 110,
                           width: 80,
                           fit: BoxFit.cover,
                         ),
@@ -53,12 +55,16 @@ class _HomePageState extends State<HomePage> {
                           height: 30,
                         ),
                         Text(
-                          "Medicamentos",
-                          style: TextStyle(fontSize: 29, color: Colors.white),
+                          """Recuerda tomar tus
+    medicamentos""",
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
                           width: 40,
-                          height: 30,
+                          height: 80,
                         ),
                       ],
                     ),
@@ -68,15 +74,14 @@ class _HomePageState extends State<HomePage> {
               Column(
                 children: [
                   SizedBox(
-                    height: 40,
+                    height: 45,
                   ),
                   Material(
-                    color: Colors.blue,
+                    color: Colors.white,
                     elevation: 20,
-                    borderRadius: BorderRadius.circular(30),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: InkWell(
-                      splashColor: Colors.green,
+                      splashColor: Colors.blue,
                       onTap: () {},
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
@@ -84,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                           Ink.image(
                             image: AssetImage(
                                 '/Applications/development/flutter/Flutter_app_ProEafit/images/alimentacion.png'),
-                            height: 80,
+                            height: 110,
                             width: 80,
                             fit: BoxFit.cover,
                           ),
@@ -93,8 +98,12 @@ class _HomePageState extends State<HomePage> {
                             height: 30,
                           ),
                           Text(
-                            "Alimentacion",
-                            style: TextStyle(fontSize: 29, color: Colors.white),
+                            """Alimentate 
+conscientemente""",
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
                             width: 50,
@@ -109,15 +118,14 @@ class _HomePageState extends State<HomePage> {
               Column(
                 children: [
                   SizedBox(
-                    height: 40,
+                    height: 45,
                   ),
                   Material(
-                    color: Colors.blue,
+                    color: Colors.white,
                     elevation: 20,
-                    borderRadius: BorderRadius.circular(30),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: InkWell(
-                      splashColor: Colors.green,
+                      splashColor: Colors.blue,
                       onTap: () {},
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
@@ -125,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                           Ink.image(
                             image: AssetImage(
                                 '/Applications/development/flutter/Flutter_app_ProEafit/images/cuidado.png'),
-                            height: 80,
+                            height: 110,
                             width: 80,
                             fit: BoxFit.cover,
                           ),
@@ -134,11 +142,14 @@ class _HomePageState extends State<HomePage> {
                             height: 30,
                           ),
                           Text(
-                            "Cuidado personal",
-                            style: TextStyle(fontSize: 29, color: Colors.white),
+                            "   Recuerda Cuidarte",
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
-                            width: 20,
+                            width: 60,
                             height: 30,
                           ),
                         ],
@@ -150,15 +161,14 @@ class _HomePageState extends State<HomePage> {
               Column(
                 children: [
                   SizedBox(
-                    height: 40,
+                    height: 45,
                   ),
                   Material(
-                    color: Colors.blue,
+                    color: Colors.white,
                     elevation: 20,
-                    borderRadius: BorderRadius.circular(30),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: InkWell(
-                      splashColor: Colors.green,
+                      splashColor: Colors.blue,
                       onTap: () {},
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
@@ -166,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                           Ink.image(
                             image: AssetImage(
                                 '/Applications/development/flutter/Flutter_app_ProEafit/images/Motivacion.png'),
-                            height: 80,
+                            height: 110,
                             width: 80,
                             fit: BoxFit.cover,
                           ),
@@ -176,10 +186,13 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Text(
                             "Motivacion",
-                            style: TextStyle(fontSize: 29, color: Colors.white),
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
-                            width: 65,
+                            width: 110,
                             height: 30,
                           ),
                         ],
@@ -191,23 +204,27 @@ class _HomePageState extends State<HomePage> {
               Column(
                 children: [
                   SizedBox(
-                    height: 40,
+                    height: 45,
                   ),
                   Material(
-                    color: Colors.blue,
+                    color: Colors.white,
                     elevation: 20,
-                    borderRadius: BorderRadius.circular(30),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: InkWell(
-                      splashColor: Colors.green,
-                      onTap: () {},
+                      splashColor: Colors.blue,
+                      onTap: () => {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return ButtonReport();
+                        }))
+                      },
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Ink.image(
                             image: AssetImage(
                                 '/Applications/development/flutter/Flutter_app_ProEafit/images/reporte.png'),
-                            height: 80,
+                            height: 110,
                             width: 80,
                             fit: BoxFit.cover,
                           ),
@@ -216,11 +233,14 @@ class _HomePageState extends State<HomePage> {
                             height: 30,
                           ),
                           Text(
-                            "Reporte general",
-                            style: TextStyle(fontSize: 29, color: Colors.white),
+                            " Reporte general",
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
-                            width: 30,
+                            width: 80,
                             height: 30,
                           ),
                         ],
@@ -232,15 +252,15 @@ class _HomePageState extends State<HomePage> {
               Column(
                 children: [
                   SizedBox(
-                    height: 40,
+                    height: 33,
                   ),
                   Material(
-                    color: Colors.blue,
+                    color: Colors.white,
                     elevation: 20,
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(90),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: InkWell(
-                      splashColor: Colors.green,
+                      splashColor: Colors.blue,
                       onTap: () {
                         FirebaseAuth.instance.signOut();
                       },
@@ -250,21 +270,17 @@ class _HomePageState extends State<HomePage> {
                           Ink.image(
                             image: AssetImage(
                                 '/Applications/development/flutter/Flutter_app_ProEafit/images/salir.png'),
-                            height: 80,
-                            width: 80,
-                            fit: BoxFit.cover,
+                            height: 60,
+                            width: 60,
+                            fit: BoxFit.fill,
                           ),
                           SizedBox(
-                            width: 110,
-                            height: 30,
-                          ),
-                          Text(
-                            "Salir",
-                            style: TextStyle(fontSize: 29, color: Colors.white),
+                            width: 0,
+                            height: 0,
                           ),
                           SizedBox(
-                            width: 110,
-                            height: 30,
+                            width: 0,
+                            height: 0,
                           ),
                         ],
                       ),
